@@ -1,0 +1,329 @@
+/*-------------------------reset css (selecteur universel et pseudo elements)---------------------*/
+*, ::before, ::after {
+  box-sizing: border-box; /*--prendre en compte le padding et la bordure par apport a la hauteur et largeur des elements--*/
+  margin: 0;              /*enlever le margin et le padding de base*/
+  padding: 0;
+}
+/*-------------------------scroll smooth pour les liens-------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f1f1f1;
+}
+
+/* ----------------------------------Header -----------------------------------------------*/
+header {
+    background: url("img/1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+    border-bottom: 1px solid #000;
+}
+h1{
+  color:#fff;
+}
+p{
+  color: white;
+}
+ /********************************text sur image**********************************/
+
+.maClass{
+    padding-top: 350px;
+text-align: center;
+ }
+ button {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  button:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  button:active {
+    transform: translateY(-1px);
+  }
+/* ----------------------------- Section Portfolio --------------------- */
+.portfolio {
+    width: 100%;
+}
+.titre-port {
+    text-align: center;
+    font-size: 50px;
+
+}
+.cont-portfolio {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.item {
+    margin: 20px;
+    width: 420px;
+    height: 350px;
+    background: #f0f2f0;
+    color: #333;
+    transition: transform 0.3s ease-out;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.item:hover {
+    transform: translateY(-5px);
+}
+.cont-img-port {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+.cont-img-port img {
+    width: 100%;
+    height: auto;
+}
+.item h3 {
+    padding: 10px 10px 0;
+    font-size: 22px;
+}
+.item p {
+    padding: 10px 10px 0;
+}
+.btn-projets {
+    display: block;
+    margin: 10px;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-projets::after {
+    content: '';
+    height: 240px;
+    width: 100px;
+    background: rgba(255,255,255,0.4);
+    display: block;
+    position: absolute;
+    left: -150px;
+    top: -50px;
+    transform: rotate(-45deg)
+}
+.btn-projets:hover::after {
+    transition: transform 0.3s 0.1s linear;
+    transform: translateX(400px);
+}
+/*------------------------------------------- Media portfolio--------------------------------------- */
+
+@media screen and (max-width: 1300px) {
+  .cont-portfolio{
+        padding-left: 0;
+    }
+    .titre-port {
+        font-size: 40px;
+      
+        padding-left: 0;
+    }
+}
+@media screen and (max-width: 500px) {
+
+    .titre-port {
+        margin: 10px 0;
+        padding: 30px 0;
+    }
+    .item {
+        height: 420px;
+    }
+    .cont-img-port {
+        height: auto;
+    }
+}
+@media screen and (max-width: 340px) {
+    .item {
+        height: 380px;
+    }
+}
+/* por */
+.centre {
+  width: 100%;
+}
+
+div {
+  overflow:hidden;
+}
+img {
+   width:800px;
+   height: 300px;
+   margin-right:20px;
+   display:inline-block;
+   vertical-align:middle;
+ 
+}
+span {
+  color: white;
+   margin-right:-100px;
+   padding-right:100px;
+   display:inline-block;
+   vertical-align:middle;
+   box-sizing:border-box;
+   -moz-box-sizing:border-box;
+   -webkit-box-sizing:border-box;
+}
+button {
+  padding: 10px 10px;
+  border: unset;
+  border-radius: 15px;
+  color: blueviolet;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+ }
+
+ button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms
+ }
+
+ button:hover {
+  color: #e8e8e8;
+ }
+
+ button:hover::before {
+  width: 100%;
+ }
+
+ .btn.button {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+/***************************************bas de page********************************************/
+
+.portfoli {
+  width: 100%;
+}
+.titre-port {
+  text-align: center;
+  font-size: 50px;
+
+}
+
+.iteme {
+  margin: 50px;
+  background: #f0f2f0;
+  color: #333;
+  transition: transform 0.3s ease-out;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.iteme:hover {
+  transform: translateY(-5px);
+}
+.conte-img-port {
+  width: 100%;
+  
+  overflow: hidden;
+}
+.conte-img-porte img {
+  width: 100%;
+  height: auto;
+}
+.iteme h3 {
+  padding: 10px 10px 0;
+  font-size: 22px;
+  
+}
+.iteme p {
+  padding: 10px 10px 0;
+}
+.btn-projet {
+  display: block;
+  margin: 10px;
+  width: 180px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #333;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-projet::after {
+  content: '';
+  height: 240px;
+  width: 100px;
+  background: rgba(255,255,255,0.4);
+  display: block;
+  position: absolute;
+  left: -150px;
+  top: -50px;
+  transform: rotate(-45deg)
+}
+.btn-projet:hover::after {
+  transition: transform 0.3s 0.1s linear;
+  transform: translateX(400px);
+}
+
+
+
